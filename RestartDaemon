@@ -1,0 +1,12 @@
+#!/bin/bash
+#Datto parameters:
+# servicename Variable Value
+
+echo "Service name is " $servicename
+if [ -z "$servicename" ]
+then
+	echo "No parameter given!"
+else
+	systemctl restart $servicename
+	echo "Service herstart"
+fi
